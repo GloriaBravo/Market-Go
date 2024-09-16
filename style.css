@@ -1,0 +1,179 @@
+/* Importa la fuente Montserrat desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Restablece márgenes y rellenos de todos los elementos, y asegura que el tamaño de los bordes y padding se incluya en el tamaño total del elemento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: "Montserrat", cursive; /* Aplica la fuente Montserrat */
+    scroll-padding-top: 2rem; /* Ajusta el espacio superior al hacer scroll */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+/* Estilos para el encabezado */
+header {
+    width: 100%; /* Ocupa todo el ancho de la página */
+    height: 10rem; /* Altura fija para el encabezado */
+    background-color: rgb(203, 219, 219); /* Color de fondo */
+    display: flex; /* Usa flexbox para alinear contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Estilos para el título dentro del encabezado */
+header h1 {
+    font-size: 3rem; /* Tamaño de fuente */
+    color: rgb(56, 27, 42); /* Color del texto */
+    text-shadow: 0 0 10px rgb(20, 17, 27); /* Sombra del texto */
+    font-weight: bold; /* Peso de la fuente en negrita */
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+/* Estilos para el área principal */
+main {
+    margin-top: 1rem; /* Margen superior */
+    width: 100%; /* Ancho completo */
+    display: flex; /* Usa flexbox para alinear contenido */
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+/* Contenedor para las cards de productos */
+.container-cards {
+    display: flex; /* Usa flexbox para alinear las cards */
+    justify-content: center; /* Centra las cards horizontalmente */
+    align-items: center; /* Centra las cards verticalmente */
+    flex-wrap: wrap; /* Permite que las cards se envuelvan en varias líneas si es necesario */
+    gap: 2rem; /* Espacio entre las cards */
+    margin-bottom: 3rem; /* Separación entre las cards y la bolsa de compras */
+}
+
+/* Estilos para cada card de producto */
+.card-products {
+    width: 18rem;  /* Ancho fijo para todas las cards */
+    height: 30rem; /* Altura fija para todas las cards */
+    background-color: #f6f5f8; /* Color de fondo */
+    border: solid 1px #cccccc; /* Borde de la card */
+    padding: 1rem; /* Padding interno */
+    display: flex; /* Usa flexbox para alinear contenido */
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de la card */
+    transition: transform 0.3s ease; /* Transición para el efecto de hover */
+    text-align: center; /* Centra el texto dentro de la card */
+}
+
+/* Efecto de escala al pasar el ratón sobre la card */
+.card-products:hover {
+    transform: scale(1.05); /* Escala la card un 5% al pasar el ratón */
+}
+
+/* Estilos para las imágenes dentro de las cards */
+.card-products img {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 5rem; /* Altura fija para las imágenes */
+    object-fit: contain; /* Ajusta las imágenes sin distorsionarlas */
+    margin-bottom: 1rem; /* Margen inferior */
+}
+
+/* Estilos para los títulos dentro de las cards */
+.card-products h1 {
+    font-size: 1.2rem; /* Tamaño de fuente para el título */
+    color: #333; /* Color del texto */
+    margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+/* Estilos para la descripción dentro de las cards */
+.card-products p {
+    font-size: 0.85rem; /* Tamaño ajustado para la descripción */
+    color: #444; /* Color del texto */
+    text-align: center; /* Centra el texto dentro de la card */
+    margin-bottom: 1rem; /* Margen inferior */
+    line-height: 1.4; /* Espaciado entre líneas */
+    max-height: 5rem; /* Altura máxima para la descripción */
+    overflow: hidden; /* Oculta el texto que se desborda */
+    text-overflow: ellipsis; /* Añade "..." al final si el texto se desborda */
+}
+
+/* Estilo para el botón de precio dentro de la card */
+.card-products .price-button {
+    padding: 0.5rem 1rem; /* Padding interno */
+    background-color: #00b894; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor en forma de mano */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    margin-bottom: 1rem; /* Margen inferior */
+    border-radius: 0.5rem; /* Bordes redondeados */
+}
+
+/* Estilos para el botón de agregar a la bolsa dentro de la card */
+.card-products button {
+    padding: 0.3rem 0.8rem; /* Tamaño más pequeño */
+    background-color: #e67e22; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor en forma de mano */
+    font-size: 1rem; /* Tamaño de fuente */
+    border-radius: 0.3rem; /* Bordes redondeados */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón de agregar a la bolsa */
+.card-products button:hover {
+    background-color: #d35400; /* Color de fondo en el hover */
+}
+
+/* Estilos para la sección de la bolsa de compras */
+#shoppingCart {
+    width: 100%; /* Ancho completo */
+    background-color: #f6f5f8; /* Color de fondo */
+    padding: 1.5rem; /* Padding interno */
+    text-align: center; /* Centra el texto */
+    margin-top: 2rem; /* Margen superior */
+    border: 1px solid #e96767;  /* Borde sutil para destacar la sección */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de la sección */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para el título de la sección de la bolsa de compras */
+#shoppingCart h2 {
+    font-size: 2rem; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    margin-bottom: 1rem; /* Margen inferior */
+}
+
+/* Estilos para la lista de elementos del carrito */
+#cartItems {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding */
+    margin-bottom: 1rem; /* Margen inferior */
+}
+
+/* Estilos para cada elemento de la lista en el carrito */
+#cartItems li {
+    font-size: 1.2rem; /* Tamaño de fuente */
+    margin-bottom: 0.5rem; /* Margen inferior */
+    color: #444; /* Color del texto */
+}
+
+/* Estilo para el botón de proceder al pago */
+#checkoutButton {
+    padding: 0.8rem 2rem; /* Padding interno */
+    background-color: #00b894; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor en forma de mano */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición para el cambio de color en el hover */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón de proceder al pago */
+#checkoutButton:hover {
+    background-color: #009374; /* Color de fondo en el hover */
+}
